@@ -1,0 +1,31 @@
+.Order, .Payment-list{
+    cursor: pointer;
+}
+.Payment-list{
+    color: #1B2C35;
+}
+.Payment-list:hover{
+    color: #A8A29F;
+    transition: .3s;
+}
+.icon-cart{
+    color: #8EA497;
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+    text-decoration: none;
+}
+.icon-cart:hover{
+    transition: .3s;
+    color: #A8A29F;
+}
+.card{
+    border: none;
+}
+img{
+    cursor: pointer;
+    transition: transform 0.3s ease-in;
+}
+img:hover{
+    transform: scale(1.05);
+}

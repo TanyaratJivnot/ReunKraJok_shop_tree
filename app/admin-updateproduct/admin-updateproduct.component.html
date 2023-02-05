@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="title"  style="margin-top: 150px;">
+        <div class="row">
+            <div class="col">
+                <h1><b>UPDATE PRODUCT</b></h1>
+            </div>
+        </div>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="update()">
+        <div class="form-row d-flex mt-5 mb-5">
+            <div class="form-group col-4">
+              <label for="inputCity">ID Product</label>
+              <input type="number" class="form-control w-75" formControlName="TreeId">
+            </div>
+            <div class="form-group col-4">
+              <label for="inputState">ID ADMIN</label>
+            <input type="number" class="form-control w-75" formControlName="admin">
+            </div>
+            <div class="form-group col-4">
+              <label for="inputZip">Name Product</label>
+              <input type="text" class="form-control w-75" formControlName="Tname">
+            </div>
+        </div>
+
+        <div class="form-row d-flex mt-5">
+            <div class="form-group col-4">
+              <label for="inputCity">Sun</label>
+              <input type="text" class="form-control w-75" name="sun" formControlName="sun">
+            </div>
+            <div class="form-group col-4">
+              <label for="inputState">Soild</label>
+            <input type="text" class="form-control w-75" formControlName="soild">
+            </div>
+            <div class="form-group col-4">
+              <label for="inputZip">Water</label>
+              <input type="text" class="form-control w-75" formControlName="water">
+            </div>
+        </div>
+        <div class="form-row d-flex mt-5">
+            <div class="form-group col-6">
+                <label for="inputZip">Temp</label>
+                <input type="text" class="form-control w-75" formControlName="temp">
+              </div>
+              <div class="form-group col-6">
+                <label for="inputZip">Image Product</label>
+                <input type="text" class="form-control w-75" formControlName="img">
+              </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col text-end">
+                <button class="btn b-1" routerLink="/AdminProduct">Cancle</button>
+                <button class="btn b-2">Save</button>
+            </div>
+        </div>
+    </form>
+</div>

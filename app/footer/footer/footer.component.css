@@ -1,0 +1,19 @@
+footer{
+    background-color: #000000;
+    color: #FFFFFF;
+    display: grid;
+    margin-top: 80px;
+    height: 250px;
+
+}
+.contect, .bank{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kb{
+    margin-right: 20px;
+}
+.scb{
+    margin-left: 20px;
+}

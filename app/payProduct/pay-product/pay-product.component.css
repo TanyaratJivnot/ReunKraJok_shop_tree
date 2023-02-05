@@ -1,0 +1,49 @@
+.btn{
+    position: relative;
+    padding: 11px 16px;
+    font-size: 15px;
+    line-height: 1.5;
+    border-radius: 3px;
+    background-color: #FAF1EC;
+    color:#A8A29F;
+    border: 0;
+    overflow: hidden;
+}
+.btn input[type="file"]{
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scale(3);
+    opacity: 0;
+}
+#pay{
+    background-color: #8EA497;
+     color:#fff;
+     width: 300px;
+}
+#pay:hover{
+    background-color: #A8A29F;
+    transition: .3s;
+}
+.icon-cart{
+    color: #8EA497;
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+    text-decoration: none;
+}
+.icon-cart:hover{
+    transition: .3s;
+    color: #A8A29F;
+}
+.card{
+    border: none;
+}
+img{
+    cursor: pointer;
+    transition: transform 0.3s ease-in;
+}
+img:hover{
+    transform: scale(1.05);
+}

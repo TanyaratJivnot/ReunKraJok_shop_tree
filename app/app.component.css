@@ -1,0 +1,5 @@
+main{
+    margin-top: 4rem;
+    min-height: calc(100vh - 8rem);
+    z-index: 1;
+}

@@ -1,0 +1,90 @@
+<form class="row" [formGroup]="register" (ngSubmit)="regisbtn()">
+    <div class="col-md-12">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" id="validationServer01" formControlName="Name" >
+        <!-- error -->
+        <div class="form-text text-danger" *ngIf="Fname.errors?.['required'] && (Fname.dirty || Fname.touched)">
+            Name is Required
+        </div>
+        <div class="form-text text-danger" *ngIf="!!Fname.errors?.['minLength'] && (Fname.dirty || Fname.touched)">
+            Name is too Short. At least 2 charecter.
+        </div>
+        <div class="form-text text-danger" *ngIf="Fname.errors?.['pattern'] && (Fname.dirty || Fname.touched)">
+            Name should start with an alephabet.
+        </div>
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" id="validationServer02" formControlName="Email">
+         <!-- error -->
+         <div class="form-text text-danger" *ngIf="Email.errors?.['required'] && (Email.dirty || Email.touched)">
+            Email is Required
+        </div>
+        <div class="form-text text-danger" *ngIf="Email.errors?.['email'] && (Email.dirty || Email.touched)">
+            Email is invalid.
+        </div>
+    </div>
+      <div class="col-md-6">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" id="validationServer02" formControlName="Password">
+        <!-- error -->
+        <div class="form-text text-danger" *ngIf="Password.errors?.['required'] && (Password.dirty || Password.touched)">
+            Password is Required
+        </div>
+        <div class="form-text text-danger" *ngIf="Password.errors?.['minLength'] || Password.errors?.['maxLength'] && (Password.dirty || Password.touched)">
+            Password should be at least 1and at the max 10
+        </div>
+    </div>
+    <div class="col-md-12">
+        <label class="form-label">Address</label>
+        <input type="text" class="form-control" id="validationServer03" aria-describedby="validationServer03Feedback" formControlName="Address">
+          <!-- error -->
+        <div class="form-text text-danger" *ngIf="Address.errors?.['required'] && (Address.dirty || Address.touched)">
+            Address is Required
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label">Zip Code</label>
+        <input type="text" class="form-control" id="validationServer01" formControlName="Zip">
+          <!-- error -->
+          <div class="form-text text-danger" *ngIf="ZipCode.errors?.['required'] && (ZipCode.dirty || ZipCode.touched)">
+            Zip Code is Required
+        </div>
+        <div class="form-text text-danger" *ngIf="ZipCode.errors?.['minLength'] || ZipCode.errors?.['maxLength'] && (ZipCode.dirty || ZipCode.touched)">
+            Zip Code should be at least 1and at the max 5
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label">Province</label>
+        <input type="text" class="form-control" id="validationServer02" formControlName="Province">
+          <!-- error -->
+          <div class="form-text text-danger" *ngIf="Province.errors?.['required'] && (Province.dirty || Province.touched)">
+            Province is Required
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label">Tel.</label>
+        <input type="text" class="form-control" id="validationServer02" formControlName="Tel">
+        <!-- error -->
+        <div class="form-text text-danger" *ngIf="Telephone.errors?.['required'] && (Telephone.dirty || Telephone.touched)">
+            Telephone is Required
+        </div>
+        <div class="form-text text-danger" *ngIf="Telephone.errors?.['minLength'] || Telephone.errors?.['maxLength'] && (Telephone.dirty || ZipCode.touched)">
+            Telephone should be at least 1and at the max 10
+        </div>
+    </div>
+    <div class="col-md-12 mt-4">
+        <label class="form-label">Picture Profile</label>
+        <input type="text" class="form-control" formControlName="Picture">
+         <!-- error -->
+         <div class="form-text text-danger" *ngIf="Profile.errors?.['required'] && (Profile.dirty || Profile.touched)">
+            profile is Required
+        </div>
+    </div>
+      <div class="col-md-12 btn-log" >
+        <button type="submit" class="btn btn-light" [disabled]="register.invalid">
+            SignUp
+        </button>
+    </div>
+   
+</form>

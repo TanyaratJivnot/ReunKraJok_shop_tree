@@ -1,0 +1,107 @@
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+}
+.logo{
+    width: 80px;
+    margin-left: 5px;
+    height: 70px
+}
+h6{
+    font-size: 13px;
+    font-weight: 20px;
+    color: #1B2C35;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    justify-content: space-around;
+    font-size: 20px;
+    
+}
+a{
+    text-decoration: none;
+    color: #1B2C35;
+}
+a:hover{
+    color: #ccc;
+    transition: .3s;
+}
+.Acol{
+     display: flex;
+    justify-content: end;
+    align-items: center;
+
+
+}
+.img-profile{
+    width: 100px;
+    margin-right: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.login,.signup{
+    margin-right: 20px;
+    font-size: 20px;
+    position: relative;
+}
+
+.bug{
+    font-size: 20px;
+}
+.Acol{
+    display: flex;
+   justify-content: end;
+   align-items: center;
+
+
+}
+.modal-header{
+    border: none;
+}
+.modal-title{
+    color: #fff;
+    font-size: 15px;
+}
+.modal-content{
+    background: white;
+    background: linear-gradient(126.66deg, rgba(255, 255, 255, 0.4) 17.84%, rgba(196, 196, 196, 0) 101.8%);
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+.btn-close{
+    background-color: #fff;
+    border-radius: 100%;
+}
+.btn{
+    border-radius: 100px;
+    margin-left: 5px;
+    background-color: #8EA497;
+    color: #fff;
+
+}
+.btn:hover{
+    transition: .3s;
+    background-color: #ccc;
+}
+input{
+    border-color: #8EA497;
+}
+.form-control{
+    width: 140px;
+}
+.nav-link:hover{
+    cursor: pointer;
+}
+.btn-log:hover{
+    cursor: pointer;
+}

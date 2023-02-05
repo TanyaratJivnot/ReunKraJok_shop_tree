@@ -1,0 +1,36 @@
+<app-banner></app-banner>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col text-end Order" routerLink="/cart">
+            <h3><b>Your Product</b> </h3>
+        </div>
+        <div class="col Payment-list"  style="color: #D8E2E4;">
+            <h3> <b>Payment List</b></h3>
+        </div>
+    </div>
+</div>
+<!-- order -->
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col">
+                    <h4><b>Order item #1077</b></h4>
+                </div>
+                <div class="col text-end">
+                    <h4><b>Price Paid : 10000</b></h4>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <div class="row">
+                <div class="col" *ngFor="let i of[1,1,1,1]">
+                    <app-product [view]="'Ordertitem'"></app-product>
+                </div>
+            </div>
+          </blockquote>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

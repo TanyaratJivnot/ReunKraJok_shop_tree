@@ -1,0 +1,19 @@
+<main>
+    <div class="container"> 
+        <h1 style="font-size: 36px; margin-top: 40px; color: #1B2C35;">
+           <b>Recommended Product!!</b> </h1>
+        <carousel [itemsPerSlide]="itemsPerSlide"
+            [singleSlideOffset]="singleSlideOffset"
+            [noWrap]="!noWrap"
+            [interval]="0"
+            [startFromIndex]="5"
+            (slideRangeChange)="onSlideRangeChange($event)" >
+            <slide *ngFor="let slide of slides; let index=index">
+                <img src="{{slide.img}}" alt="image slide" style="display: block; width: 170px;  height: 250px; margin: 5px;" ProductDetail [producId]="slide.id">
+                <div class="carousel-caption" style="color: #1B2C35;">
+                    <h5><small>{{slide.name}}</small></h5>
+                </div>
+             </slide>
+         </carousel>
+    </div>
+</main>

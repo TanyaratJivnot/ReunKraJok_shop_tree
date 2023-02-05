@@ -1,0 +1,164 @@
+<app-banner></app-banner>
+<ng-container *ngIf="product">
+    <div class="container mt-5">
+    <div class="row g-0 ">
+        <div class="col-4">
+            <div class="d-flex justify-content-center align-item-center">
+                <img src="{{product.treeImg}}" alt="" class="w-75" style="height: 450px;"> 
+            </div>
+        </div>
+        <!-- product -->
+        <div class="col-8">
+            <div class="card-body border-bottom" style="border-color: #A8A29F;">
+                <h1 class="card-title" style="color: #1B2C35;"><b>{{product.treeName}}</b></h1>
+                <h2 class="card-title" style="color: #1B2C35;"><b>{{product.cost}} Bath</b></h2>
+            </div>
+            <div class="card-body border-bottom" style="border-color: #A8A29F;">
+                <div class="row mb-3">
+                    <div class="col">
+                        <h4 class="card-title" style="color: #1B2C35;">คงเหลือ</h4>
+                    </div>
+                    <div class="col">
+                        <h4 class="card-title" style="color: #1B2C35;"><b>{{countProduct}} ต้น</b></h4>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <h4 class="card-title" style="color: #1B2C35;">จำนวน(ต้น)</h4>
+                    </div>
+                    <div class="col">
+                        <button class="up" type="button" (click)="Increase()"><b>-</b></button>
+                        <input type="text" class="inp-count text-center" [value]="counter">
+                        <button class="down" type="button" (click)="decrease()"><b>+</b></button>
+                    </div>
+                </div>
+                <div class="row mb-3 mt-5">
+                    <div class="col">
+                        <button type="button"class="buy" (click)=" buy(product)" routerLink="/payProduct">Buy Now</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="up-cate" (click)="addtocart(product)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body mb-5" style="border-color: #A8A29F;">
+                <div class="row mb-3">
+                    <div class="col">
+                        <h4 class="card-title" style="color: #1B2C35;">หมวดหมู่</h4>
+                    </div>
+                    <div class="col">
+                        <h4 class="card-title" style="color: #1B2C35;"><b>{{categoryName}}</b></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- detaile Product -->
+    <div class="d-flex justify-content-center align-item-center border-bottom" style="border-color: #A8A29F;">
+        <h1 class="mb-4" style="color: #1B2C35;"><b>Description</b></h1>
+    </div>
+    <div class="d-flex justify-content-center align-item-center" >
+        <h1 class="mt-4" style="color: #8EA497;"><b>{{product.treeName}}</b></h1>
+    </div>
+
+    <div class="d-flex justify-content-start align-item-center border-bottom" style="border-color: #A8A29F;">
+        <div class="card-body">
+            <h3 class="mt-4" style="color: #8EA497;"><b>{{product.treeName}}</b></h3>
+            <div class="row mt-5 mb-5">
+                <div class="col-4">
+                    <img src="./assets/img/sun.png" style="width: 80px;" alt="">
+                </div>
+                <div class="col-8">
+                    <h4>{{product.sunlight}}</h4>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-4">
+                    <img src="./assets/img/water.png" style="width: 60px;" alt="">
+                </div>
+                <div class="col-8">
+                    <h4>{{product.water}}</h4>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-4">
+                    <img src="./assets/img/soild.png" style="width: 90px;" alt="">
+                </div>
+                <div class="col-8">
+                    <h4>{{product.soil}}</h4>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-4">
+                    <img src="./assets/img/temp.png" style="width: 50px;" alt="">
+                </div>
+                <div class="col-8">
+                    <h4>{{product.temperature}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--other Rewive -->
+    <div class="d-flex justify-content-start align-item-center">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm mt-3">
+                    <h4>ความคิดเห็น</h4>
+                </div>
+                <div class="col-sm text-end">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-start align-item-center" style="margin-top: 10px;" *ngFor="let reviwe of [1,2,3]">
+        <div class="card-body" id="Rewive">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="https://i.pinimg.com/564x/05/d1/1c/05d11ce92d7adb056fda92655ad8a492.jpg" alt="" class="profile">
+                </div>
+                <div class="col-md-5">
+                    <div class="row">
+                        <h5><b>Jisoo</b></h5>
+                    </div>
+                    <div class="row">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam, velit, ac mattis lectus </p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-start align-item-center" style="margin-top: 10px;">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-2">
+                    <h5>ชื่อ</h5>
+                </div>
+                <div class="col-sm">
+                    <h5>{{user.userName}}</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <h5>ความคิดเห็น</h5>
+                </div>
+                <div class="col-sm-10  mt-3">
+                    <textarea name="reviwe" class="w-75" [formControl]="reviweControl"></textarea>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-sm-2">
+                
+                </div>
+               <div class="col-sm-10">
+                <button class="btn" style="background: #8EA497;border-radius: 3px;color: #fff;width: 300px;" (click)="sendReviwe()">Send Reviwe</button>
+               </div>
+            </div>
+          
+        </div>
+    </div>
+    
+    </div>
+</ng-container>
+<app-footer></app-footer>

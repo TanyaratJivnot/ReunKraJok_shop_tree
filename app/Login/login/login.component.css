@@ -1,0 +1,26 @@
+
+.btn-log{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+button{
+    border-radius: 100px;
+    border-radius: none;
+    margin-top: 30px;
+    color: #1B2C35;
+    width: 111px;
+    height: 50px;
+}
+button:hover{
+    background-color: #A8A29F;
+    transition: .3s;
+}
+.form-label{
+    color: #fff;
+}
+input{
+    border-radius: 100px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

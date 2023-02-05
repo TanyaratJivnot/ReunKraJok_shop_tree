@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<div class="card-item-viwe" style="width: 18rem;" *ngIf="view == 'product'">
+    <img class="card-img-top" src="{{product.treeImg}}" alt="Card image cap" 
+    ProductDetail [producId]="product.treeId" style="height: 400px;"><!-- ProductDetail [producId]="1" -->
+        <div class="row">
+            <div class="col">
+                <div class="card-body">
+                    <h6 class="card-title" style="color: #1B2C35;"><b>{{product.treeName}}</b></h6>
+                    <p class="card-text" style="color: #A8A29F;"><b>{{product.cost}} Bath</b></p>
+                </div>
+            </div>
+        </div>
+   
+</div>
+ 

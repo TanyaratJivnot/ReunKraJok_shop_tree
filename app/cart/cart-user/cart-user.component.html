@@ -1,0 +1,36 @@
+<app-banner></app-banner>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col text-center Order" style="color: #1B2C35;">
+            <h3><b>Your Product</b> </h3>
+        </div>
+    </div>
+</div>
+<!-- order -->
+<ng-container>
+    <div class="container mt-4">
+    <div class="row">
+        <div class="col"  *ngFor="let products of product">
+            <div class="card-item-viwe" style="width: 18rem;">
+                <img class="card-img-top" src="{{products.treeImg}}" alt="Card image cap">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card-body">
+                                <h5 class="card-title" style="color: #1B2C35;"><b>{{products.treeName}}</b></h5>
+                                <p class="card-text" style="color: #A8A29F;"><b>{{products.cost}}</b></p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card-body">
+                                <button class="btn btn-outline-danger" (click)="removeProduct(products)">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+               
+              </div>
+        </div>
+    </div>
+</div>
+</ng-container>
+
+<app-footer></app-footer>

@@ -1,0 +1,26 @@
+input{
+    background: #FFFFFF;
+    border: 1px solid #EDECEC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+}
+label{
+    margin-bottom: 20px;
+}
+.btn{
+    width: 165px;
+    height: 54px;
+}
+.btn:hover{
+    background-color: #ccc;
+    cursor: pointer;
+    transition: .3s;
+}
+.b-1{
+    background-color: #FAF1EC;
+    margin-right: 20px;
+}
+.b-2{
+    background-color: #8EA497;
+    color: #FFFFFF;
+}

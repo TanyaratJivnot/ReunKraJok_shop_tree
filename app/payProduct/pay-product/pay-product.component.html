@@ -1,0 +1,127 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="container mt-5">
+    <h1 class="mb-4" style="color: #1B2C35;"><b>Cash Payment</b></h1>
+    <h4 class="mb-3" style="color: #1B2C35;"><b>Payment Method :</b></h4>
+    <div class="row mt-4">
+        <div class="col-2 ">
+            <img src="./assets/img/kbank-icon.png" alt="" style="width: 50px;">
+        </div>
+        <div class="col-2 text-center mt-3">
+            <h5><b> KBANK :</b> </h5></div>
+        <div class="col-8  mt-3">xxx-xxxxx-xx</div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-2">
+            <img src="./assets/img/scb-bank-icon.png" alt="" style="width: 50px;">
+        </div>
+        <div class="col-2 text-center mt-3">
+            <h5><b> SCB-BANK :</b> </h5></div>
+        <div class="col-8  mt-3">xxx-xxxxx-xx</div>
+    </div>
+    <div class="row mt-5">
+        <div class="col">
+            <div class="row mb-4">
+                <div class="col">
+                    <label class="form-label" style="color: #A8A29F;"><b>Date To Pay * :</b></label>
+                    <input type="date" class="form-control w-50" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col">
+                    <label class="form-label" style="color: #A8A29F;"><b>Time To Pay * :</b></label>
+                    <input type="time" class="form-control w-50" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col">
+                    <label class="form-label" style="color: #A8A29F;"><b>Count Money * :</b></label>
+                    <input type="email" class="form-control w-50" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col">
+                    <label class="form-label" style="color: #A8A29F;"><b>Proof of Transfer * :</b></label>
+                    <input type="email" class="form-control w-50" [formControl]="selectedPaymentMethod">
+                </div>
+            </div>
+        </div>
+        <div class="col" *ngIf=" selectedPaymentMethodName != '' ">
+            <div class="row mb-4">
+                <div class="col-4">
+                    <label class="form-label" style="color: #A8A29F;"><b>Name :</b></label>
+                </div>
+                <div class="col-8">
+                    <label class="form-label" style="color: #A8A29F;" *ngIf="true">{{user.userName}}</label>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-4">
+                    <label class="form-label" style="color: #A8A29F;"><b>Address :</b></label>
+                </div>
+                <div class="col-8">
+                    <label class="form-label" style="color: #A8A29F;" *ngIf="true">{{user.address}}</label>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-4">
+                    <label class="form-label" style="color: #A8A29F;"><b>Tel. :</b></label>
+                </div>
+                <div class="col-8">
+                    <label class="form-label" style="color: #A8A29F;" *ngIf="true">{{user.tel}}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-4">
+    <div class="card"  *ngFor="let products of product">
+        <div class="card-header">
+            <div class="row">
+                <div class="col">
+                    <h4><b>Order</b></h4>
+                </div>
+                <div class="col text-end">
+                    <h4><b>Price Paid : {{products.cost}}</b></h4>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <div class="row">
+                <div class="col">
+                    <div class="card-item-viwe" style="width: 18rem;">
+                        <img class="card-img-top" src="{{products.treeImg}}" alt="Card image cap">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title" style="color: #1B2C35;"><b>{{products.treeName}}</b></h5>
+                                </div>
+                            </div>
+                        </div>
+   
+                    </div>
+                </div>
+            </div>
+          </blockquote>
+        </div>
+    </div>
+   <div class="row mt-4">
+    <div class="col d-flex justify-content-center ">
+        <button class="btn" id="pay" (click)="successNotification()">Payment </button>
+    </div>
+   </div>
+  <!--  <div class="processing">
+    <div class="spinner-border me-4" role="status" *ngIf="true">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <h6 class="m-0">error</h6>
+   </div> -->
+</div>
+<!-- <div class="container mt-6">
+    <div class="pt-4" *ngIf="!false">
+        <h4 class="text-danger">You have not Login</h4>
+    </div>
+</div> -->
+
+<app-footer></app-footer>
+

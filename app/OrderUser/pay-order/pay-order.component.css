@@ -1,0 +1,10 @@
+.Order, .Payment-list{
+    cursor: pointer;
+}
+.Order{
+    color: #1B2C35;
+}
+.Order:hover{
+    color: #A8A29F;
+    transition: .3s;
+}

@@ -1,0 +1,71 @@
+<nav class="fixed-top">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <div class="container">
+            <div class="row">
+                <div class="col-auto">
+                    <div class="logo">
+                        <img src="./assets/img/logo.png" alt="" width="75px">
+                    </div>
+                    <div class="title">
+                        <h6><b>REUN KRA JOK</b></h6>
+                    </div>
+                </div>
+                <div class="col-6 d-flex justify-content-around align-items-center">
+                    <div class="nav"  *ngIf="model.adminId != 650001">
+                        <a class="nav-link" routerLink="/home">HOME</a>
+                        <a class="nav-link"routerLink="/allplant">ALL PRODUCT</a>
+                        <a class="nav-link" routerLink="/indoorplant">INDOOR PRODUC</a>
+                        <a class="nav-link" routerLink="/outdoorplant">OUTDOOR PRODUC</a>
+                    </div>
+                    <div class="nav " *ngIf="model.adminId == 650001">
+                        <a class="nav-link" routerLink="/home">HOME</a>
+                        <a class="nav-link"routerLink="/AdminProduct">MY PRODUCT</a>
+                        <a class="nav-link"routerLink="/AdminUpdateProduct">UPDATE PRODUCT</a>
+                        
+                    </div>
+                </div>
+                <form class="col d-flex"  [formGroup]="login" (ngSubmit)="loginbtn()" autocomplete="off" style="padding: 30px;" *ngIf="!loggedIn">
+                    <input type="email" class="form-control" style="margin-right: 5px;" placeholder="Email"  name="email" formControlName="Email">
+                    <input type="password"class="form-control" placeholder="Password" name="Password" name="password" formControlName="Password">
+                    <button type="button" class="btn" (click)="loginbtn()"  [disabled]="login.invalid">Login</button>
+                    <a class="nav-link"  data-bs-toggle="modal" 
+                    data-bs-target="#generalmodal" (click)="openModel('register')">SIGN UP</a>
+                </form>
+                <div class="col d-flex justify-content-center"  *ngIf="loggedIn">
+                    <div class="img-profile">
+                        <a><img class="rounded-circle shadow-1-strong me-3" src="{{model.userImg || model.adminImg}}" alt="avatar" width="55" height="55" /></a>
+                    </div>
+                    <div class="bug" *ngIf="model.adminId != 650001">
+                        <div class="row">
+                            <div class="col"><i class="fas fa-shopping-cart" style="margin-top: 45px; font-size: 25px;" routerLink="/cart"></i></div>
+                        </div>
+                    </div>
+                    <div class="bug" *ngIf="model.adminId == 650001">
+                        <div class="row">
+                            <div class="col"><i class="fa-solid fa-bell" style="margin-top: 45px; font-size: 25px;"></i></div>
+                        </div>
+                    </div>
+                    <a class="nav-link"  data-bs-toggle="modal" 
+                    data-bs-target="#generalmodal" style="margin-top: 35px; " (click)="logout()">LOG OUT</a>
+                </div>
+            </div>
+    </div>
+</nav>
+
+<!-- modelnav -->
+<div class="modal fade" id="generalmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="./assets/img/logo.png" alt="" width="75px">
+                <h5 class="modal-title" #modalTitle>REUN KRA JOK</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" ></button>
+            </div>
+            <div class="modal-body">
+                <ng-container #container>
+
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>
